@@ -1,0 +1,9 @@
+1- Creo y levanto mi servidor (server.js)
+2- Creo el cliente (client.js)
+3- Defino el modelo (books-models)
+4- Creo las acciones a las cuales quiero limitar al cliente (books-controller)
+5- Creo las  validaciones para restringir datos que arruinaran la estructura de mi db
+6- Defino el archivo que procesa el pedido del cliente (view) -> funcion que procesa argumentos
+7- Vuelvo a mi servidor para definir el envio y la recepcion de las 
+
+

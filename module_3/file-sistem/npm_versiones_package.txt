@@ -1,0 +1,56 @@
+NPM
+Medio para descargar modulos desarrolados por otros programadores para utilizar en mi proyecto
+
+npm -v / npm --version ---> Muestra la version de Node actual
+npm init --> Iniciliza un proyecto y crea el package.json donde se van a guardar todas lo que me descargue a traves de npm
+npm init -y ---> Iniciliza un proyecto y crea el package.json con datos por default
+npm i / npm install ---> para descargar modulos o dependencias que esten especificados en el package.json
+
+Node
+fs ---> el modulo fs (file sistem)es nativo de node es para hacer manejo de archivos, escribir leer, sobreescribir, etc
+
+fs.writeFileSync( rute, dataString )  --> escribe un archivo en forma sincronica, rute --> donde queremos que se guarde, si no existe lo crea sino lo sobreescribe
+                                                                                 data --> la informacion que recibe, pide que sea de tipo string `${data}`
+
+fs.readFileSync( rute,{ encoding: 'utf-8' })  --> lee un archivo en forma sincronica, rute --> donde esta el archivo
+                                                                                      encoding: 'utf-8' --> codificacion de tipado
+
+fs.unlinkSync(ruta) ---> eliminar archivo
+
+JSON.stringify(data) ---> Convierte un valor de tipo javascript a un json string { "saludo" : "hola"}
+JSON.parse(obj) ---> convierte un json string a un objeto de javascript
+
+--------------------------------------------
+fs
+
+fs.readFile() y fs.readFileSync()
+
+fs.readFile('ruta', 'utf8', (err, data) => {
+    if(err) {
+        console.log(err)
+    } else console.log(data)
+}) 
+
+En este bloque readFile 
+INTENTA leer el archivo 
+ - OK  ---> data = {contenido del archivo}
+ - ERROR  ---> err = {contenido del error}
+
+-----package.json-----
+se descarga con npm init 
+
+contiene todos los modulos no nativos que me descargue para mi aplicacion
+se activan con npm install que genera las dependencias y el node modules con la informacion
+
+versiones de las dependencias -> major.minor.patch -> 1.0.0
+
+Por convensión:
+1.0.0 -> version inicial
+1.0.1 -> si cambia el ultimo numero por arreglo de fallas o bugs, esto no afecta a los usuarios de versiones anteriores
+1.1.0 -> si cambia el segundo numero es por que le agregar una nueva funcionalidad, esto no afecta a los usuarios de versiones anteriores
+2.0.0 -> si cambia el primer numero es que cambian funcionalidades actuale, esto probablemente afecte el codigo actual, suele avisar cuando
+         esta a punto de cambiar-
+
+1.2.0 -----> npm install ---> Instala exactamente la version que le pido
+~ 1.2.0  -----> npm install ---> Instala la versión que le pido y busca si hay algun cambio patch ej: 1.2.2
+^ 1.2.0  -----> npm install ---> Instala la versión que le pido como major pero la minor y el patch busca el mas actual

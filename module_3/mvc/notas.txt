@@ -1,0 +1,22 @@
+Patron de arquitectura
+
+Es una manera de darle forma a una app. Diagramar la app
+
+Una forma de arquitectura es MVC, se usa para app webs (backend):
+
+Models -> el modelo es la persistencia, donde se guardan los datos, define la estructura y la forma para acceder a las persistencia.
+          es donde voy a definir el formato que deben tener los datos. que se va a guardar en la db.
+          tambien me ofrece la logica para acceder a los datos, ejemplo escribir o leer
+Views  -> son los end points, son los enrutamientos a las peticiones de los clientes.
+Controllers -> Interactua entre las dos partes, models y la views.
+               entre la info de la db (models) y la vista grafica de la web(views)
+               importa las funciones de models, exporta la logica a la views
+
+Responsabilidades de cada parte:
+- Index view hace la peticion del cliente, llama al controller
+- controlador define la logica intermedia entre la peticion y la base de datos(model) para guardarlo
+- model accede a la db y define la logica de guardado
+
+SERVER
+
+esta a la escucha de peticiones, cuando le llegue un pedido evalua que hacer

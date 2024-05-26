@@ -1,0 +1,38 @@
+
+---------------------------- WEB SERVER ---------------------------
+
+UN SERVIDOR WEB ES CUALQUIER COMPUTADORA O SISTEMA QUE PROCESE SOLICITUDES (REQUEST) Y QUE DEVUELVA UNA RESPUESTA (RESPONSE) A TRAVES DE
+UN PROTOCOLO DE RED-
+
+--------------  MODELO CLIENTE SERVIDOR  -------------
+
+            aqui tiene que 
+            existir un protocolo 
+            para que haya un 
+            entendimiento.
+CLIENTE   ---- REQUEST --->>>   SERVER 
+ask for                        performs
+services  <<<-- RESPONSE ----  services
+
+------------ CAPAS Y SUS PROTOCOLOS PARA LA TRANSMISION DE PAQUETES -----------
+
+
+TCP/IP MODEL            PROTOCOLS AND SERVICES          OSI MODEL  (modelo teorico transporte, red, fisica)
+-------------------------------------------------------------------
+APPLICATION            HTTP, FTTP, telnet, NTP         APPLICATION   ---> capa en la que el usuario interactua con la app
+                             DHCP, PING                PRESENTATION
+                                                          SESSION
+-------------------------------------------------------------------
+TRASPORT        TCP -> se asegura que lleguen todos los paquetes
+                UDP -> no lo asegura, es mas rapido    TRANSPORT   ---> capa de transporte, determina y asegura el camino 
+                                                                          por el cual va el paquete-
+-------------------------------------------------------------------      
+NETWORK                   IP, ARP, ICMP, IGMP             NETWORK   ---> capa de conexion, a donde va a ir el paquete-
+-------------------------------------------------------------------
+NETWORK INTERFACE               ETHERNET                 DATA LINK   ---> capa de interfaz de conexion, como viaja fisicamente(cables, etc)
+                                                          PHYSICAL
+
+DNS ---> traduccion de las direcciones de IP de host
+
+HTTPs ---> esta ancriptado es conexion segura
+

@@ -1,0 +1,88 @@
+COMANDOS
+
+crear archivo   →  New-Item clase04-03.js
+crear carpeta   →  mkdir functions
+
+TERNARIO
+
+(num % 2 === 0) ? "Es par" : "Es impar"    →  SI se cumple el argumento entonces imprime lo que esta despues del signo de preg. SINO lo que esta despues de los dos puntos
+
+OBJETOS
+Acceder al value por DOT notation     →  obj.key → value
+Acceder al value por BRACKET notation →  obj['key'] → value
+
+METODOS DE ARRAY
+
+arr.length     → retorna la longitud del array
+arr.push()     → suma un elemento al final de array y retorna la nueva longitud
+arr.pop()      → elimina un elemento al final del array y retorna el elemento eliminado
+arr.unshift()  → añade un elemento al inicio del array y retorna la nueva longitud
+arr.shift()    → elemina el primer elemento del array y retorna el elemento eliminado
+arr.toString() → retorna una cadena de caracteres en representacion de los elementos del array (quita los corchetes)
+arr.join()     → retorna una cadena de caracteres en representacion de los elementos del array con un separador ('/')(',')('')
+arr.includes() → retorna true si el elemento está o false si no está dentro del array
+arr.slice(inicio, fin)  →
+arr.sort (fc)           → Retorna un array ordenado segun la codificación unicode, si la función de comparación es pasada como argumento
+                          es posible cambiar la forma del ordenamiento. Por defecto ordena de menor a mayor, numeros y letras.
+
+                           arr.find((elemento) => elemento === 10)
+Retorna el valor del primer elemento que coincida con la condicion establecida en la función
+
+                           arr.filter((valor actual, index, array) => elemento === 10)
+retorna un nuevo array con elemento que cumplan con la condicion de la funcion, recibe tres argumentos: valor actual, indice y el array.
+Ejemplo: let array = [1, 2]  →  1  0 [1, 2]
+                                2  1 [1, 2]
+                        valor act / Indice/ array
+
+                           arr.forEach((elemento) => console.log(elemento))
+El forEach itera sobre cada elemento del array, recibe un callback (función) por parametro que se llama por cada iteración.
+
+                           arr.map()
+
+METODOS DE OBJETOS
+
+Objets.keys(objeto)  → retorna un array con las propiedades
+Objets.values(objeto) → retorna un array con los valores de la propiedades
+Objets.entries(objeto) → retorna un array de arrays con pares de datos formados por las propiedades enumerables de un objeto y sus valores
+
+METODOS PRIMITIVOS
+
+toUpperCase()  → Convierte un string a mayuscula
+toLowerCase()  → Convierte un string a minuscula 
+toString()     → Convierte un valor a string
+toFixed(N)      → Convierte un numero en un string con N decimales, por N le paso la cant de decimales
+parseInt(str)   → Convierte un string en un numero entero
+
+(no modifica el dato lo modifca solo para esa ocasion)
+
+METODOS DE string
+
+.split('') → me lo devuelve en forma de array
+.includes() → para array y string devuelve true o false
+
+-------------------
+En un archivo Markdown (.md), algunos caracteres especiales tienen un significado especial y pueden requerir una sintaxis específica para ser interpretados correctamente por el renderizador de Markdown. Aquí hay algunos caracteres especiales comunes en Markdown:
+
+Asterisco (*), guión bajo (_), guión (-): Se utilizan para crear énfasis en texto (cursiva o negrita) o listas.
+
+Número de signo (#): Se utiliza para crear encabezados.
+
+Corchetes cuadrados (
+): Se utilizan para crear enlaces.
+
+Signo de exclamación (!): Se utiliza en combinación con corchetes cuadrados para incluir imágenes.
+
+Mayor que (>): Se utiliza para citar texto.
+
+Ampersand (&): Se utiliza para escapar caracteres especiales de HTML.
+
+Backticks (`): Se utiliza para resaltar código en línea.
+
+Barra vertical (|): Se utiliza en tablas.
+
+Para incluir estos caracteres especiales literalmente en un archivo Markdown sin que se interpreten de manera especial, puedes escaparlos con una barra invertida (). Por ejemplo:
+
+\*: Representará un asterisco literal.
+\#: Representará un número de signo literal.
+\\: Representará una barra invertida literal.
+De esta manera, si necesitas incluir caracteres especiales en un archivo Markdown sin que se interpreten de manera especial, puedes escaparlos con una barra invertida.

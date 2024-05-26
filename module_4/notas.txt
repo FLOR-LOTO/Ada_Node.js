@@ -1,0 +1,30 @@
+npm init -y 
+
+npm install --save-dev typescript
+npm install --save-dev ts-node        se instala --save-dev por que solo lo usamos en desarrollo
+
+npm i -D typescript ts-node  --> esta es la forma abreviada de lo de arriba 
+
+ts-node permite ejecutar typescript
+'compile' para que el compilador TS transpile el codigo vanilla JS, es decir js puro
+
+scripts --> los configuramos para ejecutarlos en consola y que cumplan una funcion especifica
+
+"scripts": {
+    "dev": "ts-node clase1.ts", ---> el archivo sobre el que trabajo con ts
+    "compile": "tsc", ----> la palabra tsc hace la compilacion de ts a js me crea el archivo
+    "start": "clase1.js" ---> ejecuta el archivo.js
+  },
+
+  "compile": "tsc -p tsconfig.json && node clase1.js" compila y ejecuta
+
+----------
+tsc --init  --> crea es tsconfig.json por defecto
+ tsconfig:
+- target: Se establece en "es6" , o la version que el código JavaScript generado utilice las características de ES6, incluyendo las plantillas literales.
+- module: Se mantiene en "commonjs" para la compatibilidad con Node.js. 
+- strict: Se habilita para activar todas las opciones de verificación estricta.
+- esModuleInterop: Se mantiene habilitado para facilitar la interoperabilidad con los módulos CommonJS.
+- forceConsistentCasingInFileNames: Se habilita para asegurar que los nombres de archivo en las importaciones sean consistentes en cuanto a mayúsculas y minúsculas.
+- skipLibCheck: Se habilita para omitir la verificación de los archivos de declaración .d.ts
+- "outDir": se indico la ruta a donde quiero que se guarden los archivos compilados

@@ -1,0 +1,18 @@
+---------------SERVIDORES--------------------
+
+Vamos a levantar un servidor tcp, una app que va a estar escuchando peticiones y va a responder con informacion:
+
+- Puerto: puerto informatico, lugar donde entra y sale informacion. 
+Protocolos, conexiones, informacion compartida todo transcurre mediante los puertos, es el punto de entrada y salida. 
+Tenemos entre 0 y 65535 puertos en nuestra computadora, por donde ocurren distintos tipos de comunicaciones
+
+Les dejo un breve glosario de la clase de hoy que les puede servir:
+
+- Cliente: Entidad quien SOLICITA información a SERVIDORES.
+- Servidor: Entidad quien SUMINISTRA información a CLIENTES.
+- Ip: Identificador ÚNICO de un dispositivo dentro de una RED.
+- Puerto: Elemento virtual que se utiliza para la comunicación entre aplicaciones o procesos.
+- Socket: Software que actúa como un punto final de comunicación. Es el conjunto de una IP y el puerto (192.168.0.1 : 8080). Indican el punto exacto de entrada/salida de los datos en una computadora.
+- Protocolo de red: Conjunto de normas y reglas previamente establecidas para llevar a cabo una conexión.
+- TCP: Establece una conexión confiable entre dos programas, garantizando la entrega ordenada y sin errores de los datos. Se utiliza para aplicaciones como transferencia de archivos, correo electrónico y navegación web.
+- Evento: Acción que realiza una entidad en determinado momento. Ej: conectarse, cerrar conexión, envíar o leer información.
