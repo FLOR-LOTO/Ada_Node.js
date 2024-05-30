@@ -56,7 +56,7 @@ const updateById = (bookToModify) => {
 
   const bookId = allBooks.find((book) => book.id.toString() === bookToModify.id.toString());
   if (!bookId) {
-    console.log("Ese ID no existe en nuestra base de datos.");
+    return ("Ese ID no existe en nuestra base de datos.");
   }
   if (bookToModify.name) {
     bookId.name = bookToModify.name;

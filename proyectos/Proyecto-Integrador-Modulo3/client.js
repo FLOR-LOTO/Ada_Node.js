@@ -7,17 +7,17 @@ const client = new net.createConnection({ port: 3000 });
 client
   .on("connect", () => {
     const book = {
-      //id:5,
+      id:6,
       name: "Misery",
       author: "Stephen King",
       tags: ["terror", "drama"],
     };
 
-    //const data = { action: "getAll" };
-    const data = { action: "getById", body: book};
+    // const data = { action: "getAll" };
+    // const data = { action: "getById", body: book};
     // const data = { action: "getByName", body: book};
     // const data = { action: "getByAuthor", body: book};
-    // const data = { action: "creteBook", body: book};
+    const data = { action: "createBook", body: book};
     // const data = { action: "updateById", body: book};
     // const data = { action: "deleteById", body: book};
 
