@@ -1,0 +1,52 @@
+git init ---> inicio git
+
+Creo archivo .gitignore ---> le indico que ignore el node_modules
+
+npm init -y ---> descargo mi package.json
+
+npm i -D typescript ts-node ---> descargo las dependencias
+
+index.ts ---> creo el archivo inicial en src
+
+ "dev": "ts-node ./src/index.ts" ----> creo un script en el package.json, se ejecuta con la palabra run --> npm run dev
+            |           |
+     la dependencia   la ubicacion del archivo a ejecutar
+si quisiera llamar al index de esa ubicacion puedo indicar solo el . ---> "dev": "ts-node ./src/."
+
+tsc --init  --> creo el tsconfig.json
+-------------------------------------------
+
+Si la dependencia esta solo de manera local puedo ejecutar en consola
+npx ts-node ./src/calculator.ts
+
+Si la dependencia esta de manera global no hace falta el npx
+ts-node ./src/calculator.ts
+
+- Instalar ts-node Globalmente (si aún no lo has hecho):
+
+npm install -g ts-node
+
+- Verificar la Ruta de Instalación Global:
+
+Ejecuta el siguiente comando para encontrar la ruta donde npm instala paquetes globales:
+npm config get prefix
+
+La salida será algo como C:\Users\YourUsername\AppData\Roaming\npm.
+
+- Añadir la Ruta al PATH:
+
+Abre las configuraciones del sistema:
+Haz clic derecho en el botón de inicio y selecciona "Sistema".
+Haz clic en "Configuración avanzada del sistema".
+Haz clic en "Variables de entorno".
+En "Variables del sistema", busca la variable Path y haz clic en "Editar".
+Añade una nueva entrada con la ruta obtenida en el paso anterior (C:\Users\YourUsername\AppData\Roaming\npm).
+Haz clic en "Aceptar" para guardar los cambios.
+Reiniciar la Terminal:
+
+Cierra y vuelve a abrir tu terminal para que los cambios surtan efecto.
+
+Verificar que ts-node Está en el PATH:
+
+Ejecuta:
+ts-node --version
